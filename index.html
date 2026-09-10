@@ -1,436 +1,396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="APPES integra asesoramiento legal y contable con Inteligencia Artificial: análisis documental, automatización, asistentes privados y procesos profesionales con revisión humana.">
-  <meta name="theme-color" content="#121016">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="APPES | Legal & Accounting AI">
-  <meta property="og:description" content="Asesoramiento profesional potenciado por IA, con control humano y soluciones adaptadas a cada organización.">
-  <meta property="og:type" content="website">
+  <title>APPES Legal AI | Asesoramiento Legal y Contable con IA</title>
 
-  <title>APPES | Legal & Accounting AI</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="app.js"></script>
+  <meta name="description"
+        content="APPES integra inteligencia artificial, asesoramiento legal y servicios contables para transformar procesos profesionales.">
+
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/appes-v6.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#inicio" class="interactive-logo" id="interactiveLogo" aria-label="APPES - Ir al inicio"
-         style="--arm-left:67.8640%;--arm-top:31.0651%;--arm-width:15.2021%;--arm-origin-x:78.06%;--arm-origin-y:9.04%">
-        <img src="assets/appes-logo-base.png" alt="APPES" class="logo-base">
-        <img src="assets/appes-monkey-arm.png" alt="" class="logo-arm" aria-hidden="true">
-      </a>
 
-      <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#confianza">Confianza</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
 
-      <a class="header-cta" href="#contacto">Hablar con APPES <span>↗</span></a>
+    <a href="#inicio" class="brand">
+      <div class="monkey-box">
+        <img
+          src="img/mono.png"
+          class="monkey"
+          alt="APPES"
+          onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');"
+        >
+      </div>
 
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-    </div>
+      <div class="brand-divider"></div>
 
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#servicios">Servicios</a>
-      <a href="#como-funciona">Cómo funciona</a>
-      <a href="#beneficios">Beneficios</a>
+      <div class="brand-copy">
+        <span class="brand-name">APPES</span>
+        <span class="brand-subtitle">LEGAL AI</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#soluciones">Soluciones</a>
+      <a href="#diferencial">Diferencial</a>
+      <a href="#proceso">Cómo trabajamos</a>
       <a href="#confianza">Confianza</a>
-      <a href="#contacto">Hablar con APPES</a>
-    </div>
-  </header>
+      <a href="#contacto" class="nav-cta">Hablemos</a>
+    </nav>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-orb orb-a"></div>
-      <div class="hero-orb orb-b"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span>LEGAL + ACCOUNTING + AI</div>
-          <h1>Asesoramiento profesional, <em>potenciado por IA.</em></h1>
-          <p class="hero-lead">
-            Integramos experiencia legal y contable con Inteligencia Artificial para analizar mejor,
-            automatizar tareas repetitivas y tomar decisiones con más contexto, trazabilidad y control.
-          </p>
-          <div class="hero-actions">
-            <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico <span>↗</span></a>
-            <a href="#servicios" class="btn btn-ghost">Explorar servicios</a>
-          </div>
-          <div class="hero-trust">
-            <span><b>✓</b> Revisión profesional</span>
-            <span><b>✓</b> Soluciones a medida</span>
-            <span><b>✓</b> IA con fuentes y contexto</span>
-          </div>
-        </div>
+  </div>
+</header>
 
-        <div class="hero-product reveal" aria-label="Vista conceptual de APPES AI">
-          <div class="product-topbar">
-            <span class="product-brand">APPES <b>AI Workspace</b></span>
-            <span class="secure-badge">● Human Review</span>
-          </div>
+<main id="inicio">
 
-          <div class="product-tabs">
-            <button class="product-tab active" data-product-tab="legal">Legal</button>
-            <button class="product-tab" data-product-tab="accounting">Contable</button>
-          </div>
+  <section class="hero">
+    <div class="container hero-grid">
 
-          <div class="product-panel active" data-product-panel="legal">
-            <div class="prompt-box">
-              <small>CONSULTA JURÍDICA</small>
-              <p>Revisá este contrato, detectá obligaciones críticas y vinculá cada observación con la cláusula de origen.</p>
-            </div>
-            <div class="ai-output">
-              <div class="output-head"><span>Análisis</span><strong>Fuentes vinculadas</strong></div>
-              <div class="output-line w95"></div>
-              <div class="output-line w82"></div>
-              <div class="output-line w70"></div>
-              <div class="source-chip"><span>01</span> Contrato / Cláusula 8.2 <b>↗</b></div>
-              <div class="source-chip"><span>02</span> Normativa aplicable <b>↗</b></div>
-            </div>
-          </div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow">Inteligencia profesional</div>
 
-          <div class="product-panel" data-product-panel="accounting">
-            <div class="prompt-box">
-              <small>ANÁLISIS CONTABLE</small>
-              <p>Compará movimientos, señalá diferencias relevantes y prepará una conciliación para revisión del profesional.</p>
-            </div>
-            <div class="ai-output">
-              <div class="output-head"><span>Conciliación asistida</span><strong>3 excepciones</strong></div>
-              <div class="metric-row"><span>Movimientos procesados</span><b>248</b></div>
-              <div class="metric-row"><span>Coincidencias propuestas</span><b>245</b></div>
-              <div class="source-chip"><span>01</span> Mayor contable <b>↗</b></div>
-              <div class="source-chip"><span>02</span> Extracto bancario <b>↗</b></div>
-            </div>
-          </div>
+        <h1>
+          Legal y contable.
+          <span class="gradient-text">Potenciado por IA.</span>
+        </h1>
 
-          <div class="review-strip">
-            <span class="review-icon">✓</span>
-            La IA prepara y organiza. El profesional revisa y decide.
-          </div>
-        </div>
-      </div>
+        <p>
+          Unimos conocimiento profesional, tecnología e inteligencia artificial
+          para simplificar procesos legales y contables, acelerar decisiones y
+          transformar la forma de trabajar.
+        </p>
 
-      <div class="container capability-bar reveal">
-        <span>Legal AI</span><i></i><span>Accounting AI</span><i></i><span>RAG</span><i></i>
-        <span>AI Agents</span><i></i><span>Automatización</span><i></i><span>Integraciones</span>
-      </div>
-    </section>
-
-    <section class="trust-strip">
-      <div class="container trust-strip-inner reveal">
-        <p>IA aplicada al trabajo profesional, no al reemplazo del profesional.</p>
-        <div class="trust-pills">
-          <span>Trazabilidad</span>
-          <span>Confidencialidad</span>
-          <span>Control humano</span>
-          <span>Personalización</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="kicker">SERVICIOS PRINCIPALES</p>
-            <h2>Dos disciplinas. Una capa de inteligencia.</h2>
-          </div>
-          <p>
-            APPES combina conocimiento profesional con tecnología para construir soluciones que
-            acompañan la tarea diaria de estudios, empresas y equipos internos.
-          </p>
-        </div>
-
-        <div class="service-columns">
-          <article class="service-feature legal-feature reveal">
-            <div class="service-label">
-              <span class="service-icon">§</span>
-              <span>LEGAL AI</span>
-            </div>
-            <h3>Asesoramiento legal asistido por IA.</h3>
-            <p>
-              Investigación, análisis y automatización jurídica sobre documentos, contratos,
-              expedientes, normativa y conocimiento interno.
-            </p>
-            <div class="feature-list">
-              <span>Análisis de contratos</span>
-              <span>Investigación jurídica</span>
-              <span>Expedientes y cronologías</span>
-              <span>Asistentes privados</span>
-              <span>Monitoreo normativo</span>
-              <span>Automatización documental</span>
-            </div>
-            <a href="#contacto" class="inline-link">Conocer Legal AI <span>↗</span></a>
-          </article>
-
-          <article class="service-feature accounting-feature reveal">
-            <div class="service-label">
-              <span class="service-icon">∑</span>
-              <span>ACCOUNTING AI</span>
-            </div>
-            <h3>Asesoramiento contable con más contexto y menos carga manual.</h3>
-            <p>
-              IA aplicada a conciliaciones, revisión de documentación, clasificación,
-              análisis de variaciones y preparación de información para el profesional.
-            </p>
-            <div class="feature-list">
-              <span>Conciliaciones asistidas</span>
-              <span>Análisis de variaciones</span>
-              <span>Clasificación documental</span>
-              <span>Control de comprobantes</span>
-              <span>Reportes inteligentes</span>
-              <span>Workflows recurrentes</span>
-            </div>
-            <a href="#contacto" class="inline-link">Conocer Accounting AI <span>↗</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section benefits-section" id="beneficios">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="kicker">POR QUÉ IA</p>
-            <h2>Automatizar lo repetitivo. Elevar lo profesional.</h2>
-          </div>
-          <p>
-            El objetivo no es producir más información, sino reducir trabajo mecánico y
-            mejorar la calidad de la revisión, el contexto y la toma de decisiones.
-          </p>
-        </div>
-
-        <div class="benefit-grid">
-          <article class="benefit-card reveal">
-            <span class="benefit-num">01</span>
-            <h3>Menos tareas manuales</h3>
-            <p>La IA puede preparar, ordenar, clasificar y comparar información antes de la revisión humana.</p>
-          </article>
-          <article class="benefit-card reveal">
-            <span class="benefit-num">02</span>
-            <h3>Más capacidad de análisis</h3>
-            <p>Procesá grandes volúmenes documentales sin perder el vínculo con el contexto de origen.</p>
-          </article>
-          <article class="benefit-card reveal">
-            <span class="benefit-num">03</span>
-            <h3>Procesos consistentes</h3>
-            <p>Convertí criterios profesionales en pasos repetibles, checklists y automatizaciones controladas.</p>
-          </article>
-          <article class="benefit-card reveal">
-            <span class="benefit-num">04</span>
-            <h3>Conocimiento reutilizable</h3>
-            <p>Transformá documentos, modelos y antecedentes propios en una base de conocimiento consultable.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section how-section" id="como-funciona">
-      <div class="container">
-        <div class="how-grid">
-          <div class="how-copy reveal">
-            <p class="kicker">CÓMO FUNCIONA</p>
-            <h2>La IA se adapta al proceso, no al revés.</h2>
-            <p>
-              Cada implementación comienza por el flujo profesional real: qué documentos existen,
-              quién revisa, qué criterios importan y qué parte puede automatizarse de forma segura.
-            </p>
-            <a href="#contacto" class="btn btn-dark">Diseñar un caso de uso <span>↗</span></a>
-          </div>
-
-          <div class="steps-list">
-            <article class="step reveal">
-              <span>01</span>
-              <div>
-                <h3>Diagnóstico</h3>
-                <p>Identificamos tareas repetitivas, fuentes, riesgos y oportunidades de mejora.</p>
-              </div>
-            </article>
-            <article class="step reveal">
-              <span>02</span>
-              <div>
-                <h3>Conocimiento</h3>
-                <p>Conectamos documentos, criterios, modelos y datos relevantes para el caso de uso.</p>
-              </div>
-            </article>
-            <article class="step reveal">
-              <span>03</span>
-              <div>
-                <h3>Automatización</h3>
-                <p>Diseñamos asistentes o agentes que ejecutan tareas concretas bajo reglas definidas.</p>
-              </div>
-            </article>
-            <article class="step reveal">
-              <span>04</span>
-              <div>
-                <h3>Revisión profesional</h3>
-                <p>El resultado llega preparado para validar, corregir, aprobar o escalar según corresponda.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section ai-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="kicker">CAPACIDADES</p>
-            <h2>Una plataforma conceptual para cualquier workflow profesional.</h2>
-          </div>
-          <p>
-            No vendemos un único chatbot. Diseñamos la combinación de IA, conocimiento e integración
-            adecuada para cada problema.
-          </p>
-        </div>
-
-        <div class="capability-grid">
-          <article class="capability-card reveal">
-            <span class="cap-icon">◎</span>
-            <h3>Asistentes privados</h3>
-            <p>Consultas sobre documentación propia, con contexto y permisos definidos por la organización.</p>
-          </article>
-          <article class="capability-card reveal">
-            <span class="cap-icon">⌕</span>
-            <h3>RAG y búsqueda semántica</h3>
-            <p>Recuperación de información relevante desde repositorios internos antes de generar una respuesta.</p>
-          </article>
-          <article class="capability-card reveal">
-            <span class="cap-icon">↻</span>
-            <h3>AI Agents</h3>
-            <p>Agentes que encadenan pasos, verificaciones y acciones dentro de procesos definidos.</p>
-          </article>
-          <article class="capability-card reveal">
-            <span class="cap-icon">⌘</span>
-            <h3>Integraciones</h3>
-            <p>Conexión con documentos, correo, repositorios, ERPs, CRMs y herramientas de trabajo existentes.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section trust-section" id="confianza">
-      <div class="container trust-grid">
-        <div class="trust-copy reveal">
-          <p class="kicker">CONFIANZA Y CONTROL</p>
-          <h2>IA que prepara. Profesionales que responden.</h2>
-          <p>
-            En servicios legales y contables, velocidad sin control no alcanza. La arquitectura debe
-            preservar contexto, fuentes, permisos y una instancia humana de validación.
-          </p>
-        </div>
-
-        <div class="trust-cards">
-          <article class="trust-card reveal">
-            <span>01</span>
-            <h3>Fuentes identificables</h3>
-            <p>Los flujos pueden conservar referencias a documentos y datos utilizados en el análisis.</p>
-          </article>
-          <article class="trust-card reveal">
-            <span>02</span>
-            <h3>Human in the loop</h3>
-            <p>La IA propone o prepara; el profesional revisa aquello que tendrá efecto jurídico o contable.</p>
-          </article>
-          <article class="trust-card reveal">
-            <span>03</span>
-            <h3>Acceso controlado</h3>
-            <p>Las soluciones pueden diseñarse con permisos y separación de información según equipos y necesidades.</p>
-          </article>
-          <article class="trust-card reveal">
-            <span>04</span>
-            <h3>Evaluación antes de escalar</h3>
-            <p>Primero se valida el caso de uso; luego se automatiza aquello que demuestra utilidad real.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section integration-section">
-      <div class="container integration-card reveal">
-        <div>
-          <p class="kicker">INTEGRACIONES</p>
-          <h2>Trabaja con la información que ya usa tu equipo.</h2>
-          <p>
-            Una solución de IA aporta más cuando se conecta con las fuentes y herramientas
-            donde el trabajo realmente sucede.
-          </p>
-        </div>
-        <div class="integration-cloud" aria-label="Ejemplos de integraciones">
-          <span>Google Drive</span>
-          <span>Microsoft 365</span>
-          <span>SharePoint</span>
-          <span>ERP</span>
-          <span>CRM</span>
-          <span>Email</span>
-          <span>APIs</span>
-          <span>Documentos</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section audience-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="kicker">PARA QUIÉN</p>
-            <h2>Diseñado para equipos que necesitan criterio, no solo velocidad.</h2>
-          </div>
-        </div>
-        <div class="audience-grid">
-          <article class="audience-card reveal"><span>01</span><h3>Estudios jurídicos</h3><p>Investigación, contratos, expedientes, conocimiento y automatización.</p></article>
-          <article class="audience-card reveal"><span>02</span><h3>Estudios contables</h3><p>Conciliaciones, documentación, reportes, controles y workflows recurrentes.</p></article>
-          <article class="audience-card reveal"><span>03</span><h3>Áreas internas</h3><p>Legal, Finanzas, Compliance y operaciones profesionales dentro de empresas.</p></article>
-          <article class="audience-card reveal"><span>04</span><h3>Profesionales independientes</h3><p>Herramientas personalizadas para ampliar capacidad sin sumar complejidad.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contacto">
-      <div class="container contact-card reveal">
-        <div class="contact-copy">
-          <p class="kicker light">EMPEZÁ POR UN CASO CONCRETO</p>
-          <h2>¿Qué parte de tu trabajo debería hacer la IA primero?</h2>
-          <p>
-            Contanos qué tarea consume tiempo, qué documentación utiliza y qué resultado necesitás.
-            APPES evalúa el caso y diseña una propuesta de implementación.
-          </p>
-        </div>
-        <div class="contact-actions">
-          <a href="mailto:TU_EMAIL_AQUI?subject=Consulta%20APPES%20Legal%20%26%20Accounting%20AI" class="btn btn-light">
-            Solicitar diagnóstico <span>↗</span>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">
+            Conocé APPES <span>→</span>
           </a>
-          <small>Reemplazá <code>TU_EMAIL_AQUI</code> en <code>index.html</code>.</small>
+
+          <a href="#soluciones" class="btn btn-secondary">
+            Explorar soluciones
+          </a>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/appes-logo-original.png" alt="APPES">
-        <p>Legal & Accounting AI</p>
+      <div class="ai-panel reveal">
+        <div class="panel-top">
+          <span class="panel-label">APPES Intelligence</span>
+          <span class="status">
+            <span class="status-dot"></span>
+            IA activa
+          </span>
+        </div>
+
+        <div class="ai-core">
+          <div class="core-center">AI</div>
+        </div>
+
+        <div class="panel-list">
+          <div class="panel-row">
+            Análisis documental
+            <strong>IA + Legal</strong>
+          </div>
+
+          <div class="panel-row">
+            Procesos contables
+            <strong>Automatización</strong>
+          </div>
+
+          <div class="panel-row">
+            Información profesional
+            <strong>Contextual</strong>
+          </div>
+
+          <div class="panel-row">
+            Decisiones
+            <strong>Data Driven</strong>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#servicios">Servicios</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#confianza">Confianza</a>
-      </div>
-      <div class="footer-note">
-        <p>La IA funciona como asistencia profesional. Los resultados que produzcan efectos legales o contables requieren revisión humana.</p>
-        <span>© <span id="year"></span> APPES.</span>
+
+    </div>
+  </section>
+
+  <section id="soluciones" class="section solutions">
+    <div class="container">
+
+      <div class="section-label reveal">Soluciones</div>
+
+      <h2 class="reveal">
+        Tecnología que trabaja junto al profesional.
+      </h2>
+
+      <p class="section-intro reveal">
+        La IA no reemplaza el criterio profesional. Lo amplifica, automatizando
+        tareas repetitivas y haciendo accesible la información relevante cuando
+        realmente se necesita.
+      </p>
+
+      <div class="cards">
+
+        <article class="card reveal">
+          <span class="card-number">01</span>
+          <h3>Legal AI</h3>
+          <p>
+            Análisis de documentación, organización de antecedentes, búsquedas
+            inteligentes y asistencia en procesos jurídicos.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-number">02</span>
+          <h3>Accounting AI</h3>
+          <p>
+            Automatización de procesos, interpretación de información contable
+            y generación de datos útiles para la toma de decisiones.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-number">03</span>
+          <h3>AI Agents</h3>
+          <p>
+            Agentes inteligentes diseñados para ejecutar flujos de trabajo,
+            consultar información y asistir en operaciones profesionales.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-number">04</span>
+          <h3>Document Intelligence</h3>
+          <p>
+            Extracción, clasificación, estructuración y análisis contextual de
+            grandes volúmenes de documentación.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-number">05</span>
+          <h3>Automatización</h3>
+          <p>
+            Integración de tareas y procesos repetitivos para reducir tiempos,
+            errores operativos y costos.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-number">06</span>
+          <h3>Knowledge AI</h3>
+          <p>
+            Sistemas capaces de consultar información interna y responder
+            utilizando conocimiento profesional contextualizado.
+          </p>
+        </article>
+
       </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="diferencial" class="section differential">
+    <div class="container split">
+
+      <div>
+        <div class="section-label reveal">Diferencial</div>
+
+        <h2 class="reveal">
+          La IA con criterio profesional.
+        </h2>
+
+        <p class="section-intro reveal">
+          Diseñamos soluciones donde tecnología, experiencia humana y
+          conocimiento especializado funcionan como un único sistema.
+        </p>
+      </div>
+
+      <div class="feature-list">
+
+        <div class="feature reveal">
+          <div class="feature-icon">01</div>
+          <div>
+            <h3>Human in the loop</h3>
+            <p>
+              La decisión final sigue teniendo supervisión y criterio profesional.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon">02</div>
+          <div>
+            <h3>Automatización inteligente</h3>
+            <p>
+              La tecnología se ocupa de tareas repetitivas para liberar tiempo
+              de mayor valor.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon">03</div>
+          <div>
+            <h3>Información contextual</h3>
+            <p>
+              La IA trabaja con información específica de cada organización y caso.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon">04</div>
+          <div>
+            <h3>Diseñado para profesionales</h3>
+            <p>
+              Flujos simples y herramientas pensadas para el trabajo real,
+              no para demostrar tecnología.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" class="section">
+    <div class="container">
+
+      <div class="section-label reveal">Cómo trabajamos</div>
+
+      <h2 class="reveal">
+        De un proceso complejo a una solución inteligente.
+      </h2>
+
+      <div class="process-grid">
+
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h3>Entender</h3>
+          <p>
+            Analizamos el proceso, la información disponible y el objetivo profesional.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <h3>Diseñar</h3>
+          <p>
+            Definimos dónde la IA puede aportar valor real y dónde debe intervenir una persona.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <h3>Integrar</h3>
+          <p>
+            Conectamos datos, automatizaciones y herramientas con el flujo existente.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <h3>Evolucionar</h3>
+          <p>
+            Medimos resultados y optimizamos la solución en forma continua.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="confianza" class="section">
+    <div class="container">
+
+      <div class="trust-panel reveal">
+
+        <div class="section-label">Confianza</div>
+
+        <h2>
+          Inteligencia artificial con responsabilidad.
+        </h2>
+
+        <p class="section-intro">
+          Los sistemas profesionales requieren algo más que velocidad.
+          Requieren trazabilidad, seguridad, contexto y supervisión humana.
+        </p>
+
+        <div class="trust-grid">
+
+          <div class="trust-item">
+            <strong>Privacidad</strong>
+            <p>
+              La información se administra bajo criterios de confidencialidad
+              y acceso controlado.
+            </p>
+          </div>
+
+          <div class="trust-item">
+            <strong>Supervisión</strong>
+            <p>
+              Los resultados generados por IA pueden incorporarse a procesos
+              de revisión profesional.
+            </p>
+          </div>
+
+          <div class="trust-item">
+            <strong>Trazabilidad</strong>
+            <p>
+              Diseñamos procesos donde sea posible comprender el origen
+              y contexto de la información.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contacto" class="cta">
+    <div class="container">
+
+      <div class="cta-panel reveal">
+
+        <div class="section-label">APPES</div>
+
+        <h2>
+          El futuro profesional empieza con mejores herramientas.
+        </h2>
+
+        <p>
+          Exploremos cómo inteligencia artificial, automatización y conocimiento
+          profesional pueden transformar tus procesos legales y contables.
+        </p>
+
+        <a href="mailto:contacto@appes.com.ar" class="btn btn-primary">
+          Hablemos <span>→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+
+    <div>
+      <span class="footer-brand">APPES</span>
+      &nbsp; Legal AI
+    </div>
+
+    <div>
+      © <span id="year"></span> APPES. Todos los derechos reservados.
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/appes-v6.js"></script>
 </body>
 </html>
