@@ -1,76 +1,42 @@
-# APPES Professional AI — V6
+# APPES Legal AI — V4 — V2
 
-Landing page para **asesoramiento legal + contable potenciado por IA**.
+Versión visual alineada con la identidad del banner de LinkedIn de APPES: negro/borgoña, violeta, naranja, arquitectura jurídica clásica y detalles tecnológicos.
 
-## Concepto
-
-La estructura toma como referencia únicamente patrones de comunicación comunes en SaaS profesionales modernos:
-
-- hero con propuesta de valor;
-- plataforma / workspace visual;
-- control humano;
-- beneficios;
-- workflows;
-- integraciones;
-- CTA.
-
-Los textos y la identidad visual son propios de APPES.
-
-## Logo interactivo
-
-El logo está dividido en dos capas:
-
-- `assets/appes-logo-base.png`
-- `assets/appes-monkey-arm.png`
-
-La cara del mono **no se gira ni cambia**. Permanece siempre de perfil.
-
-Cuando el usuario apoya el mouse:
-
-1. el brazo se eleva desde el hombro;
-2. el ángulo acompaña sutilmente la posición del cursor;
-3. al retirar el mouse vuelve a la postura original;
-4. en dispositivos táctiles la animación queda desactivada.
-
-La animación usa CSS transforms + JavaScript y no requiere GIF, video ni librerías.
-
-## Archivos
-
-```text
-appes-professional-ai-v6/
-├── index.html
-├── styles.css
-├── app.js
-├── README.md
-└── assets/
-    ├── appes-logo-original.png
-    ├── appes-logo-base.png
-    ├── appes-monkey-arm.png
-    └── favicon.png
-```
+## Incluye
+- Logo APPES sobre fondo transparente
+- Banner Legal AI integrado al hero
+- Diseño responsive
+- Animaciones sutiles
+- HTML/CSS/JS puro
+- Sin Node ni dependencias
 
 ## Antes de publicar
+En `app.js`, reemplazar:
 
-En `index.html`, reemplazar:
-
-```text
-TU_EMAIL_AQUI
+```js
+CONTACT_EMAIL: "TU_EMAIL_AQUI"
 ```
 
-por el email real de APPES.
-
-## GitHub / Cloudflare Pages
-
-Sitio 100% estático. No necesita Node ni build.
-
+## GitHub
 ```bash
-git add -A
-git commit -m "APPES Professional AI V6"
-git push origin main
+git init
+git add .
+git commit -m "APPES Legal AI V2"
+git branch -M main
+git remote add origin https://github.com/mboero9/TU-REPOSITORIO.git
+git push -u origin main
 ```
 
-Cloudflare Pages:
-
-- Framework preset: `None`
+## Cloudflare Pages
+- Framework preset: None
 - Build command: vacío
 - Output directory: `/`
+
+
+## V4
+
+- Nuevo logo APPES más limpio y serio.
+- Mono y tipografía original conservados.
+- Logo de cabecera ampliado para mejorar visibilidad.
+- Fondo del logo convertido a transparente.
+- Favicon actualizado con el mono APPES.
