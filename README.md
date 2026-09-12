@@ -6,11 +6,11 @@ Landing page estática de APPES con una estética integral oscura, responsive y 
 
 - `index.html`: estructura y contenido.
 - `styles.css`: tema visual y adaptación responsive.
-- `app.js`: menú móvil, animaciones de entrada y año automático.
+- `app.js`: selector Legal/Contable, cambio completo ES/EN con persistencia, menú móvil, animaciones de entrada y año automático.
 - `img/`: recursos gráficos existentes del repositorio.
 
 ## Publicación
 
-Compatible con GitHub Pages y Cloudflare Pages/Workers Assets. No requiere Node.js ni dependencias.
+Compatible con GitHub Pages y Cloudflare Pages/Workers Assets. No requiere Node.js ni dependencias. El idioma elegido se conserva en el navegador mediante `localStorage`.
 
 Antes de publicar, reemplazar `TU_EMAIL_AQUI` en `index.html` por la dirección de contacto definitiva.

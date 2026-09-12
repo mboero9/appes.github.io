@@ -10,14 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260912-2">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header" id="inicio">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="APPES, inicio">
+      <a class="brand" href="#inicio" aria-label="APPES, inicio" data-i18n-aria="brandLabel">
         <img src="img/appes.jpg" alt="APPES">
       </a>
 
@@ -25,14 +25,19 @@
         <span></span><span></span>
       </button>
 
-      <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#metodo">Cómo funciona</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#confianza">Confianza</a>
+      <nav class="main-nav" id="main-menu" aria-label="Navegación principal" data-i18n-aria="navLabel">
+        <a href="#servicios" data-i18n="navServices">Servicios</a>
+        <a href="#metodo" data-i18n="navMethod">Cómo funciona</a>
+        <a href="#beneficios" data-i18n="navBenefits">Beneficios</a>
+        <a href="#confianza" data-i18n="navTrust">Confianza</a>
       </nav>
 
-      <a class="button button-small header-cta" href="#contacto">Hablar con APPES <span aria-hidden="true">↗</span></a>
+      <div class="language-switcher" role="group" aria-label="Idioma" data-i18n-aria="languageLabel">
+        <button class="active" type="button" data-lang="es" aria-pressed="true"><span aria-hidden="true">🇪🇸</span> ES</button>
+        <button type="button" data-lang="en" aria-pressed="false"><span aria-hidden="true">🇺🇸</span> EN</button>
+      </div>
+
+      <a class="button button-small header-cta" href="#contacto" data-i18n-html="headerCta">Hablar con APPES <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -43,75 +48,78 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span></span> Legal + Accounting + AI</p>
-          <h1>Asesoramiento<br>profesional,<br><em>potenciado por IA.</em></h1>
-          <p class="hero-lead">Integramos experiencia legal y contable con Inteligencia Artificial para analizar mejor, automatizar tareas repetitivas y tomar decisiones con más contexto, trazabilidad y control.</p>
+          <h1 data-i18n-html="heroTitle">Asesoramiento<br>profesional,<br><em>potenciado por IA.</em></h1>
+          <p class="hero-lead" data-i18n="heroLead">Integramos experiencia legal y contable con Inteligencia Artificial para analizar mejor, automatizar tareas repetitivas y tomar decisiones con más contexto, trazabilidad y control.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#servicios">Explorar soluciones</a>
-            <a class="button button-ghost" href="#metodo">Ver cómo funciona</a>
+            <a class="button button-primary" href="#servicios" data-i18n="exploreSolutions">Explorar soluciones</a>
+            <a class="button button-ghost" href="#metodo" data-i18n="seeHow">Ver cómo funciona</a>
           </div>
         </div>
 
-        <div class="workspace reveal" role="img" aria-label="Demostración de APPES AI Workspace">
+        <section class="workspace reveal" aria-label="Demostración de APPES AI Workspace" data-i18n-aria="workspaceLabel">
           <div class="workspace-topline">
             <span>APPES <strong>AI Workspace</strong></span>
-            <span class="status"><i></i> Revisión humana</span>
+            <span class="status"><i></i><span data-i18n="humanReview">Revisión humana</span></span>
           </div>
-          <div class="workspace-tabs" role="presentation">
-            <span class="active">Legal</span><span>Contable</span>
+          <div class="workspace-tabs" role="tablist" aria-label="Área profesional" data-i18n-aria="workspaceTabsLabel">
+            <button class="active" id="legal-tab" type="button" role="tab" data-mode="legal" aria-selected="true" aria-controls="workspace-panel" data-i18n="legalTab">Legal</button>
+            <button id="accounting-tab" type="button" role="tab" data-mode="accounting" aria-selected="false" aria-controls="workspace-panel" data-i18n="accountingTab">Contable</button>
           </div>
-          <div class="workspace-query">
-            <small>Consulta jurídica</small>
-            <p>Revisá este contrato, detectá obligaciones críticas y vinculá cada observación con la cláusula de origen.</p>
+          <div class="workspace-content" id="workspace-panel" role="tabpanel" aria-labelledby="legal-tab" tabindex="0" aria-live="polite">
+            <div class="workspace-query">
+              <small id="workspace-query-label">Consulta jurídica</small>
+              <p id="workspace-query-text">Revisá este contrato, detectá obligaciones críticas y vinculá cada observación con la cláusula de origen.</p>
+            </div>
+            <div class="workspace-analysis">
+              <div class="analysis-title"><span data-i18n="analysis">Análisis</span><strong data-i18n="linkedSources">Fuentes vinculadas</strong></div>
+              <div class="analysis-lines"><i></i><i></i><i></i></div>
+              <ol id="workspace-sources">
+                <li><span>01</span><span>Contrato / Cláusula 8.2</span><b>↗</b></li>
+                <li><span>02</span><span>Normativa aplicable</span><b>↗</b></li>
+                <li><span>03</span><span>Criterio de revisión</span><b>↗</b></li>
+              </ol>
+            </div>
           </div>
-          <div class="workspace-analysis">
-            <div class="analysis-title"><span>Análisis</span><strong>Fuentes vinculadas</strong></div>
-            <div class="analysis-lines"><i></i><i></i><i></i></div>
-            <ol>
-              <li><span>01</span> Contrato / Cláusula 8.2 <b>↗</b></li>
-              <li><span>02</span> Normativa aplicable <b>↗</b></li>
-              <li><span>03</span> Criterio de revisión <b>↗</b></li>
-            </ol>
-          </div>
-        </div>
+        </section>
       </div>
     </section>
 
-    <section class="capabilities" aria-label="Capacidades">
+    <section class="capabilities" aria-label="Capacidades" data-i18n-aria="capabilitiesLabel">
       <div class="container capabilities-row">
-        <span>Legal AI</span><i></i><span>Accounting AI</span><i></i><span>RAG</span><i></i><span>AI Agents</span><i></i><span>Automatización</span><i></i><span>Integraciones</span>
+        <span>Legal AI</span><i></i><span>Accounting AI</span><i></i><span>RAG</span><i></i><span>AI Agents</span><i></i><span data-i18n="automation">Automatización</span><i></i><span data-i18n="integrations">Integraciones</span>
       </div>
     </section>
 
     <section class="principles">
       <div class="container principles-row">
-        <p>IA aplicada al trabajo profesional, no al reemplazo del profesional.</p>
-        <div class="pills"><span>Trazabilidad</span><span>Confidencialidad</span><span>Control humano</span><span>Personalización</span></div>
+        <p data-i18n="principle">IA aplicada al trabajo profesional, no al reemplazo del profesional.</p>
+        <div class="pills"><span data-i18n="traceability">Trazabilidad</span><span data-i18n="confidentiality">Confidencialidad</span><span data-i18n="humanControl">Control humano</span><span data-i18n="personalization">Personalización</span></div>
       </div>
     </section>
 
     <section class="section services section-grid" id="servicios">
       <div class="container">
-        <p class="eyebrow">Servicios principales</p>
+        <p class="eyebrow" data-i18n="servicesEyebrow">Servicios principales</p>
         <div class="section-heading reveal">
-          <h2>Dos disciplinas. Una<br>capa de inteligencia.</h2>
-          <p>APPES combina conocimiento profesional con tecnología para construir soluciones que acompañan la tarea diaria de estudios, empresas y equipos internos.</p>
+          <h2 data-i18n-html="servicesTitle">Dos disciplinas. Una<br>capa de inteligencia.</h2>
+          <p data-i18n="servicesIntro">APPES combina conocimiento profesional con tecnología para construir soluciones que acompañan la tarea diaria de estudios, empresas y equipos internos.</p>
         </div>
 
         <div class="service-cards">
           <article class="service-card legal reveal">
             <div class="card-kicker"><span>§</span> Legal AI</div>
             <div>
-              <h3>Asesoramiento legal<br>asistido por IA.</h3>
-              <p>Investigación, análisis documental, cronologías y revisión contractual con fuentes conectadas y criterio profesional.</p>
-              <a href="#soluciones">Ver capacidades <span>↗</span></a>
+              <h3 data-i18n-html="legalServiceTitle">Asesoramiento legal<br>asistido por IA.</h3>
+              <p data-i18n="legalServiceText">Investigación, análisis documental, cronologías y revisión contractual con fuentes conectadas y criterio profesional.</p>
+              <a href="#soluciones" data-i18n-html="seeCapabilities">Ver capacidades <span>↗</span></a>
             </div>
           </article>
           <article class="service-card accounting reveal">
             <div class="card-kicker"><span>∑</span> Accounting AI</div>
             <div>
-              <h3>Asesoramiento contable<br>con más contexto.</h3>
-              <p>Automatización de procesos, lectura de documentación y soporte analítico para acelerar tareas sin perder control.</p>
-              <a href="#soluciones">Ver capacidades <span>↗</span></a>
+              <h3 data-i18n-html="accountingServiceTitle">Asesoramiento contable<br>con más contexto.</h3>
+              <p data-i18n="accountingServiceText">Automatización de procesos, lectura de documentación y soporte analítico para acelerar tareas sin perder control.</p>
+              <a href="#soluciones" data-i18n-html="seeCapabilities">Ver capacidades <span>↗</span></a>
             </div>
           </article>
         </div>
@@ -121,16 +129,16 @@
     <section class="section solutions" id="soluciones">
       <div class="container">
         <div class="section-heading compact reveal">
-          <div><p class="eyebrow">Capacidades</p><h2>Herramientas que trabajan<br>con tu conocimiento.</h2></div>
-          <p>Diseñadas alrededor de tus procesos, documentación y criterios. Sin respuestas genéricas ni cajas negras.</p>
+          <div><p class="eyebrow" data-i18n="capabilitiesEyebrow">Capacidades</p><h2 data-i18n-html="capabilitiesTitle">Herramientas que trabajan<br>con tu conocimiento.</h2></div>
+          <p data-i18n="capabilitiesIntro">Diseñadas alrededor de tus procesos, documentación y criterios. Sin respuestas genéricas ni cajas negras.</p>
         </div>
         <div class="solution-grid">
-          <article class="solution-card reveal"><span>01</span><h3>Investigación profesional</h3><p>Búsqueda y síntesis con citas verificables y fuentes vinculadas.</p></article>
-          <article class="solution-card reveal"><span>02</span><h3>Expedientes y cronologías</h3><p>Organización de hechos, documentos, fechas y relaciones relevantes.</p></article>
-          <article class="solution-card reveal"><span>03</span><h3>Análisis de contratos</h3><p>Detección de cláusulas, obligaciones, riesgos y puntos de negociación.</p></article>
-          <article class="solution-card reveal"><span>04</span><h3>Asistentes privados</h3><p>Agentes especializados en los criterios y flujos de cada equipo.</p></article>
-          <article class="solution-card reveal"><span>05</span><h3>RAG documental</h3><p>Respuestas basadas en documentación propia, con origen trazable.</p></article>
-          <article class="solution-card reveal"><span>06</span><h3>Monitoreo e integración</h3><p>Seguimiento normativo y conexión segura con sistemas existentes.</p></article>
+          <article class="solution-card reveal"><span>01</span><h3 data-i18n="solution1Title">Investigación profesional</h3><p data-i18n="solution1Text">Búsqueda y síntesis con citas verificables y fuentes vinculadas.</p></article>
+          <article class="solution-card reveal"><span>02</span><h3 data-i18n="solution2Title">Expedientes y cronologías</h3><p data-i18n="solution2Text">Organización de hechos, documentos, fechas y relaciones relevantes.</p></article>
+          <article class="solution-card reveal"><span>03</span><h3 data-i18n="solution3Title">Análisis de contratos</h3><p data-i18n="solution3Text">Detección de cláusulas, obligaciones, riesgos y puntos de negociación.</p></article>
+          <article class="solution-card reveal"><span>04</span><h3 data-i18n="solution4Title">Asistentes privados</h3><p data-i18n="solution4Text">Agentes especializados en los criterios y flujos de cada equipo.</p></article>
+          <article class="solution-card reveal"><span>05</span><h3 data-i18n="solution5Title">RAG documental</h3><p data-i18n="solution5Text">Respuestas basadas en documentación propia, con origen trazable.</p></article>
+          <article class="solution-card reveal"><span>06</span><h3 data-i18n="solution6Title">Monitoreo e integración</h3><p data-i18n="solution6Text">Seguimiento normativo y conexión segura con sistemas existentes.</p></article>
         </div>
       </div>
     </section>
@@ -138,15 +146,15 @@
     <section class="section method section-grid" id="metodo">
       <div class="container method-grid">
         <div class="method-intro reveal">
-          <p class="eyebrow">Metodología APPES</p>
-          <h2>De una necesidad real<br>a una solución útil.</h2>
-          <p>No empezamos por la herramienta. Empezamos por el trabajo que tu equipo necesita mejorar.</p>
+          <p class="eyebrow" data-i18n="methodEyebrow">Metodología APPES</p>
+          <h2 data-i18n-html="methodTitle">De una necesidad real<br>a una solución útil.</h2>
+          <p data-i18n="methodIntro">No empezamos por la herramienta. Empezamos por el trabajo que tu equipo necesita mejorar.</p>
         </div>
         <ol class="steps">
-          <li class="reveal"><span>01</span><div><h3>Diagnóstico</h3><p>Identificamos tareas, fuentes, riesgos y oportunidades concretas.</p></div></li>
-          <li class="reveal"><span>02</span><div><h3>Diseño</h3><p>Definimos alcance, flujos, controles y experiencia de uso.</p></div></li>
-          <li class="reveal"><span>03</span><div><h3>Prototipo</h3><p>Validamos rápido con casos reales y participación del equipo.</p></div></li>
-          <li class="reveal"><span>04</span><div><h3>Implementación</h3><p>Integramos, documentamos y medimos la solución en operación.</p></div></li>
+          <li class="reveal"><span>01</span><div><h3 data-i18n="step1Title">Diagnóstico</h3><p data-i18n="step1Text">Identificamos tareas, fuentes, riesgos y oportunidades concretas.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3 data-i18n="step2Title">Diseño</h3><p data-i18n="step2Text">Definimos alcance, flujos, controles y experiencia de uso.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3 data-i18n="step3Title">Prototipo</h3><p data-i18n="step3Text">Validamos rápido con casos reales y participación del equipo.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3 data-i18n="step4Title">Implementación</h3><p data-i18n="step4Text">Integramos, documentamos y medimos la solución en operación.</p></div></li>
         </ol>
       </div>
     </section>
@@ -154,13 +162,13 @@
     <section class="section benefits" id="beneficios">
       <div class="container">
         <div class="section-heading reveal">
-          <div><p class="eyebrow">Beneficios</p><h2>Más capacidad.<br>El mismo criterio.</h2></div>
-          <p>La tecnología aporta velocidad y escala; el criterio profesional mantiene el contexto, la responsabilidad y la decisión final.</p>
+          <div><p class="eyebrow" data-i18n="benefitsEyebrow">Beneficios</p><h2 data-i18n-html="benefitsTitle">Más capacidad.<br>El mismo criterio.</h2></div>
+          <p data-i18n="benefitsIntro">La tecnología aporta velocidad y escala; el criterio profesional mantiene el contexto, la responsabilidad y la decisión final.</p>
         </div>
         <div class="benefit-grid">
-          <article class="benefit reveal"><strong>01</strong><h3>Menos tiempo operativo</h3><p>Automatizá lectura, clasificación, comparación y preparación de información.</p></article>
-          <article class="benefit reveal"><strong>02</strong><h3>Más consistencia</h3><p>Aplicá criterios definidos de forma repetible y auditable.</p></article>
-          <article class="benefit reveal"><strong>03</strong><h3>Mejores decisiones</h3><p>Reuní datos, antecedentes y documentos en un mismo contexto.</p></article>
+          <article class="benefit reveal"><strong>01</strong><h3 data-i18n="benefit1Title">Menos tiempo operativo</h3><p data-i18n="benefit1Text">Automatizá lectura, clasificación, comparación y preparación de información.</p></article>
+          <article class="benefit reveal"><strong>02</strong><h3 data-i18n="benefit2Title">Más consistencia</h3><p data-i18n="benefit2Text">Aplicá criterios definidos de forma repetible y auditable.</p></article>
+          <article class="benefit reveal"><strong>03</strong><h3 data-i18n="benefit3Title">Mejores decisiones</h3><p data-i18n="benefit3Text">Reuní datos, antecedentes y documentos en un mismo contexto.</p></article>
         </div>
       </div>
     </section>
@@ -168,23 +176,23 @@
     <section class="section trust" id="confianza">
       <div class="container trust-grid">
         <div class="reveal">
-          <p class="eyebrow">Confianza por diseño</p>
-          <h2>La IA acompaña.<br>La decisión sigue siendo humana.</h2>
+          <p class="eyebrow" data-i18n="trustEyebrow">Confianza por diseño</p>
+          <h2 data-i18n-html="trustTitle">La IA acompaña.<br>La decisión sigue siendo humana.</h2>
         </div>
         <div class="trust-list">
-          <article class="reveal"><span>●</span><div><h3>Confidencialidad</h3><p>Arquitecturas pensadas para proteger información profesional sensible.</p></div></article>
-          <article class="reveal"><span>●</span><div><h3>Trazabilidad</h3><p>Respuestas vinculadas con su documentación y fuentes de origen.</p></div></article>
-          <article class="reveal"><span>●</span><div><h3>Revisión humana</h3><p>Controles explícitos antes de convertir un análisis en una decisión.</p></div></article>
+          <article class="reveal"><span>●</span><div><h3 data-i18n="trust1Title">Confidencialidad</h3><p data-i18n="trust1Text">Arquitecturas pensadas para proteger información profesional sensible.</p></div></article>
+          <article class="reveal"><span>●</span><div><h3 data-i18n="trust2Title">Trazabilidad</h3><p data-i18n="trust2Text">Respuestas vinculadas con su documentación y fuentes de origen.</p></div></article>
+          <article class="reveal"><span>●</span><div><h3 data-i18n="trust3Title">Revisión humana</h3><p data-i18n="trust3Text">Controles explícitos antes de convertir un análisis en una decisión.</p></div></article>
         </div>
       </div>
     </section>
 
     <section class="contact section-grid" id="contacto">
       <div class="container contact-inner reveal">
-        <p class="eyebrow">Empecemos</p>
-        <h2>Convertí el conocimiento de tu equipo<br>en una ventaja operativa.</h2>
-        <p>Contanos qué proceso querés mejorar y diseñamos una solución concreta.</p>
-        <a class="button button-primary" href="mailto:TU_EMAIL_AQUI">Hablar con APPES <span>↗</span></a>
+        <p class="eyebrow" data-i18n="contactEyebrow">Empecemos</p>
+        <h2 data-i18n-html="contactTitle">Convertí el conocimiento de tu equipo<br>en una ventaja operativa.</h2>
+        <p data-i18n="contactText">Contanos qué proceso querés mejorar y diseñamos una solución concreta.</p>
+        <a class="button button-primary" href="mailto:TU_EMAIL_AQUI" data-i18n-html="contactCta">Hablar con APPES <span>↗</span></a>
       </div>
     </section>
   </main>
@@ -192,11 +200,11 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <a class="footer-brand" href="#inicio">APPES</a>
-      <p>Legal · Contable · Inteligencia Artificial</p>
+      <p data-i18n="footerLine">Legal · Contable · Inteligencia Artificial</p>
       <p>© <span id="year"></span> APPES</p>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20260912-2"></script>
 </body>
 </html>
