@@ -356,6 +356,107 @@ button{font:inherit}
 }
 .inline-link span{color:var(--orange)}
 
+.use-cases-section{
+  background:#eee9e3;
+  border-top:1px solid #ddd6cf
+}
+.use-case-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  align-items:start
+}
+.use-case-group{
+  padding:38px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  box-shadow:0 22px 60px rgba(30,22,31,.07)
+}
+.legal-use-cases{
+  color:#fff;
+  border-color:rgba(255,255,255,.09);
+  background:
+    radial-gradient(circle at 96% 2%,rgba(255,122,79,.15),transparent 28%),
+    var(--dark)
+}
+.accounting-use-cases{
+  background:
+    radial-gradient(circle at 96% 2%,rgba(101,17,83,.1),transparent 28%),
+    #fff
+}
+.use-case-heading{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:16px;
+  align-items:start;
+  padding-bottom:30px
+}
+.use-case-heading .service-icon{width:44px;height:44px}
+.use-case-heading .kicker{margin:2px 0 9px}
+.legal-use-cases .use-case-heading .kicker{color:#ff9b76}
+.use-case-heading h3{
+  margin:0;
+  font-size:clamp(27px,3vw,39px);
+  line-height:1.08;
+  letter-spacing:-.035em
+}
+.use-case-list{border-top:1px solid rgba(36,29,38,.12)}
+.legal-use-cases .use-case-list{border-color:rgba(255,255,255,.11)}
+.use-case-item{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:12px;
+  padding:21px 0;
+  border-bottom:1px solid rgba(36,29,38,.1)
+}
+.legal-use-cases .use-case-item{border-color:rgba(255,255,255,.09)}
+.use-case-item>span{
+  padding-top:3px;
+  color:var(--orange);
+  font-size:9px;
+  font-weight:900
+}
+.use-case-item h4{
+  margin:0 0 6px;
+  font-size:15px;
+  letter-spacing:-.01em
+}
+.use-case-item p{
+  margin:0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7
+}
+.legal-use-cases .use-case-item p{color:#aea4ac}
+.professional-note{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-top:18px;
+  padding:20px 24px;
+  border:1px solid #dcd4cd;
+  border-radius:18px;
+  background:rgba(255,255,255,.7)
+}
+.professional-note>span{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:var(--orange-2);
+  background:#fff0ea;
+  font-weight:900
+}
+.professional-note p{
+  margin:0;
+  color:#615963;
+  font-size:12px;
+  line-height:1.65
+}
+.professional-note strong{color:var(--ink)}
+
 .benefits-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .benefit-card{
@@ -498,6 +599,7 @@ button{font:inherit}
   .hero-grid{gap:48px}
   .hero-product{max-width:650px}
   .service-columns{grid-template-columns:1fr}
+  .use-case-columns{grid-template-columns:1fr}
   .benefit-grid,.capability-grid,.audience-grid{grid-template-columns:1fr 1fr}
   .how-copy,.trust-copy{position:static}
   .trust-cards{margin-top:30px}
@@ -520,6 +622,7 @@ button{font:inherit}
   .trust-pills{justify-content:flex-start}
   .section-heading{gap:20px;margin-bottom:36px}
   .service-feature{padding:28px;min-height:auto}
+  .use-case-group{padding:28px}
   .service-feature h3{margin-top:52px}
   .feature-list{grid-template-columns:1fr}
   .benefit-grid,.capability-grid,.audience-grid,.trust-cards{grid-template-columns:1fr}
