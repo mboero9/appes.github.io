@@ -1,6 +1,8 @@
-# APPES Professional AI — V6
+# APPES Professional AI — Soluciones completas
 
 Landing page para **asesoramiento legal + contable potenciado por IA**.
+
+Esta versión incorpora una sección detallada y en lenguaje claro con ocho casos de uso para abogados y ocho para contadores. También reemplaza términos técnicos como RAG y AI Agents por explicaciones centradas en el resultado para el cliente.
 
 ## Concepto
 
