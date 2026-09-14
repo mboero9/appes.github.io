@@ -294,6 +294,20 @@ button{font:inherit}
 .section-heading>p{
   margin:0;color:var(--muted);font-size:15px;line-height:1.75;max-width:500px
 }
+.use-cases-section .section-heading{align-items:start}
+.solutions-summary{max-width:560px}
+.solutions-summary p{
+  margin:0 0 15px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.75
+}
+.solutions-summary p:last-child{
+  margin-bottom:0;
+  padding-top:3px;
+  color:var(--ink);
+  font-weight:850
+}
 
 .service-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .service-feature{
