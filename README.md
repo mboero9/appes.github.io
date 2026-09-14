@@ -51,15 +51,9 @@ appes-professional-ai-v6/
     └── favicon.png
 ```
 
-## Antes de publicar
+## Contacto
 
-En `index.html`, reemplazar:
-
-```text
-TU_EMAIL_AQUI
-```
-
-por el email real de APPES.
+La landing utiliza [contacto@appes.lat](mailto:contacto@appes.lat) para las consultas y solicitudes de diagnóstico.
 
 ## GitHub / Cloudflare Pages
 
